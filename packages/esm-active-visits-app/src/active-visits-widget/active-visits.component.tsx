@@ -177,10 +177,11 @@ const ActiveVisitsTable = () => {
                           <th colSpan={headers.length + 2}>
                             <ExtensionSlot
                               className={styles.visitSummaryContainer}
-                              extensionSlotName="visit-summary-slot"
+                              extensionSlotName="visit-detail-overview-slot"
                               state={{
-                                visitUuid: paginatedActiveVisits[index]?.visitUuid,
+                                visit: paginatedActiveVisits[index]?.visit,
                                 patientUuid: paginatedActiveVisits[index]?.patientUuid,
+                                listViewOverride: true,
                               }}
                             />
                           </th>

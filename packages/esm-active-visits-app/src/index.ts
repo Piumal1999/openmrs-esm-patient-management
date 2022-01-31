@@ -28,11 +28,6 @@ function setupOpenMRS() {
         slot: 'homepage-widgets-slot',
         load: getAsyncLifecycle(() => import('./active-visits-widget/active-visits.component'), options),
       },
-      {
-        id: 'visit-summary-widget',
-        slot: 'visit-summary-slot',
-        load: getAsyncLifecycle(() => import('./visits-summary/visit-detail.component'), options),
-      },
     ],
   };
 }

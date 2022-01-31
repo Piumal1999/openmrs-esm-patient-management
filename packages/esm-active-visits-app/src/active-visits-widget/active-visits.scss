@@ -2,7 +2,7 @@
 
 .activeVisitsContainer {
   background-color: $ui-background;
-  border: 1px solid #e0e0e0;
+  border: 1px solid $grey-2;
   width: 100%;
   margin: 0 auto;
   max-width: 95vw;
@@ -28,7 +28,8 @@
   display: block;
   width: 2rem;
   padding-top: 0.188rem;
-  border-bottom: 0.375rem solid #007d79;
+  border-bottom: 0.375rem solid;
+  @include brand-03(border-bottom-color)
 }
 
 .tableContainer section{
@@ -50,11 +51,11 @@
 }
 
 .activeVisitsTable tr[data-parent-row]:nth-child(odd) td {
-  background-color: #ffffff;
+  background-color: $ui-02;
 }
 
 .activeVisitsTable  tbody  tr[data-parent-row]:nth-child(even)  td {
-  background-color: #f4f4f4;
+  background-color: $openmrs-background-grey;
 }
 
 .visitSummaryContainer {
@@ -110,7 +111,8 @@
     display: block;
     width: 2rem;
     padding-top: 0.188rem;
-    border-bottom: 0.375rem solid $brand-teal-01;
+    border-bottom: 0.375rem solid;
+    @include brand-03(border-bottom-color)
   }
 }
 
@@ -119,7 +121,8 @@
   display: block;
   width: 2rem;
   padding-top: 0.188rem;
-  border-bottom: 0.375rem solid $brand-teal-01;
+  border-bottom: 0.375rem solid;
+  @include brand-03(border-bottom-color)
 }
 
 .tile {
