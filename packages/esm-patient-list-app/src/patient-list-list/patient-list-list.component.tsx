@@ -124,6 +124,7 @@ const PatientListList: React.FC = () => {
               placeHolder: t('search', 'Search'),
               currentSearchTerm: searchString,
             }}
+            data-testid="patientListsTable"
           />
         </div>
       </section>
