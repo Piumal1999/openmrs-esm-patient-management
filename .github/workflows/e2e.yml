@@ -39,7 +39,10 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Run dev server
-        run: yarn start --sources 'packages/esm-*-app'
+        run: yarn start --sources 'packages/esm-*-app'&
+        
+      - name: which in 8084
+        run: lsof -i tcp:8084
       
       - name: Run E2E tests
         run: yarn playwright test
