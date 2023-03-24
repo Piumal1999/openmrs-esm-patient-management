@@ -39,7 +39,7 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Run dev server
-        run: yarn start --sources 'packages/esm-active-visits-app' --sources 'packages/esm-appointments-app/' --sources 'packages/esm-outpatient-app/' --sources 'packages/esm-patient-list-app/' &
+        run: yarn start --sources 'packages/esm-*-app'
       
       - name: Run E2E tests
         run: yarn playwright test
