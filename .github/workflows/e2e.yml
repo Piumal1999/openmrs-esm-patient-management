@@ -42,7 +42,7 @@ jobs:
         run: yarn start --sources 'packages/esm-*-app/'&
 
       - name: Wait for OpenMRS instance to start
-        run: while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost:8080/openmrs/spa/login.htm)" != "200" ]]; do sleep 10; done
+        run: sleep 60
       
       - name: Run E2E tests
         run: yarn playwright test
