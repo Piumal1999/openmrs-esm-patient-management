@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  backend:
+    image: piumal1999/openmrs-reference-application-3-backend:nightly-with-data
+    depends_on:
+      - db
+    ports:
+      - 9000:8080
+
+  # DB
+  db:
+    image: piumal1999/openmrs-reference-application-3-db:nightly-with-data
